@@ -14,9 +14,9 @@
     text-decoration: none;
 }
 
-html{
-    background-size: 100%;
-    background: url("motto.jpg") no-repeat fixed;
+html, body{
+    height: 100%;
+    background: #323A45 url("motto.jpg") no-repeat fixed center center;
 }
 
 .navBar a:hover{
@@ -30,8 +30,3 @@ html{
     color: #efb509;
     text-decoration: none;
 }
-
-.ContactMe{
-    position: fixed;
-}
-
