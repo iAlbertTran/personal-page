@@ -1,36 +1,62 @@
 html{
-    background: #323A45 url("motto.jpg") no-repeat fixed center center;
+    background-color: #323A45;
 }
 
 .navBar{
-    background-color: #323A45;
+    background-color: #efefef;
     text-align: right;
     padding-top: 1%;
     padding-bottom: 1%;
     position: fixed;
+    right: 0;
     width: 100%;
+    border-bottom: solid;
+    color: #ff3b3f;
 }
 
 .navBar a{
-    color: #f34a4a;
-    font-size: 200%;
-    padding: 15px;
+    color: #ff3b3f;
+    font-size: 150%;
+    padding: 1%;
     text-decoration: none;
-    border-bottom: solid;
 }
 
 .navBar a:hover{
-    background-color: #3c4753;
-    color: #ff1e53;
+    background-color: #a9a9a9;
+    color: #ff3b3f;
     text-decoration: none;
 }
 
 .navBar a:visited{
-    background-color: #3c4753;
-    color: #ff1e53;
+    background-color: #a9a9a9;
+    color: #ff3b3f;
     text-decoration: none;
 }
 
-.top{
-    color: white;
+.spacer
+{
+    width: 100%;
+    background-color: #efefef;
+}
+
+#coverIMG{
+    position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    color: #ff3b3f;
+    z-index: 1;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #efefef;
+}
+
+#frontCover{
+    background: rgba(255, 59, 63, 0.5);
+    z-index: 2;
+    overflow: hidden;
+    height: 100%;
 }
