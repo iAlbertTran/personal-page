@@ -23,8 +23,10 @@ nav{
     padding-top: 1%;
     padding-bottom: 1%;
     position: fixed;
+    top: 0;
     right: 0;
     width: 100%;
+    min-width: 550px;
     border-bottom: solid;
     color: #ff3b3f;
     box-shadow: 0 4px 4px rgba(0,0,0,.4);
@@ -72,36 +74,55 @@ nav a:hover{
     background-attachment: fixed;
 
     overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    min-height: 90vh;
+    margin-top: 4%;
 }
 
 #frontCover p{
-    padding-top: 10%;
-    z-index: 150;
-    font-size: 500%;
+    margin-top: 4.25%;
     color: #efefef;
-}
-
-#frontCoverColorOverlay{
-    background: rgba(255,59,63, 0.6);
-    width: 100vw;
-    height: 100vh;
     text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
+.textBox{
+    position: absolute;
+    left: 3vw;
+    top: 10vh;
+}
 #coverArrow #arrow .arrowIMG{
     font-size: 80px;
     color: #efefef;
     animation-duration: 2.5s;
+
 }
 
 .coverText{
     box-shadow: 0 4px 4px -4px rgba(0,0,0, 0.5);
     font-family: "Palanquin Dark";
+    font-size: 5vw;
 }
 
 #coverCaption{
-    font-size: 40%;
+    font-size: 1.5vw;
+    border-style: none;
+}
+
+#coverHead{
+    width: 100vw;
+    height: 80vh;
+    background: rgba(255,59,63, 0.6);
+    min-width: 550px;
+}
+
+#frontCover footer{
+    text-align: center;
+    background: rgba(255,59,63, 0.6);
+    height: 10vh;
 }
 
 
