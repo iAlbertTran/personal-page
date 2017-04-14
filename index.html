@@ -8,58 +8,46 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Baloo+Chettan">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script src="index.js" type="text/javascript"></script>
+    <script type="text/javascript" src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
-    <div>
+    <header>
         <nav>
-            <a href="#Top" id="top"><span class="align">TOP</span></a>
-            <a href="#About"><span class="align">ABOUT</span></a>
+            <a href="#Top" id="top">TOP</a>
+            <a href="#About">ABOUT</a>
             <a href="#Portfolio">PORTFOLIO</a>
             <a href="#ContactMe">CONTACT</a>
         </nav>
-    </div>
+    </header>
 
-    <div id="frontCover">
-        <div id="coverHead">
-            <p class="textBox">
-                <span class="coverText">
+    <main>
+        <div id="frontCover">
+            <div id="text">
+                <p class="coverText">
                     Albert T. Tran <br>
                     Web Developer<br>
                     Bay Area, California<br><br>
-                </span>
-                <span class="coverText" id="coverCaption">
+                </p>
+                <p class="coverText" id="coverCaption">
                     Scroll down to see my work!
-                </span>
-            </p>
+                </p>
+            </div>
+            <footer>
+                <a href="#About" id="coverArrow">
+                    <i class="arrowIMG fa fa-angle-double-down animated infinite bounce"></i>
+                </a>
+            </footer>
         </div>
-        <footer>
-            <a href="#About" id="coverArrow">
-            <span id="arrow">
-                <i class="arrowIMG fa fa-angle-double-down animated infinite bounce"></i>
-            </span>
-            </a>
-        </footer>
-    </div>
+
+        <div id="AboutMe" class="section">
+            <div class="bar">
+                <a name="About">&lt;About Me/&gt;</a>
+            </div>
+        </div>
+    </main>
 
 
-    <div id="AboutMe" class="section">
-        <div class="bar">
-            <a name="About">&lt;About Me/&gt;</a>
-        </div>
-    </div>
-
-    <div id="port" class="section">
-        <div class="bar">
-            <a name="Portfolio">&lt;Recent Work/&gt;</a>
-        </div>
-    </div>
-    <div id="contact" class="section">
-        <div class="bar">
-            <a name="ContactMe">&lt;Contact Me/&gt;</a>
-        </div>
-    </div>
 
 
 
@@ -75,6 +63,6 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
 </body>
 </html>
