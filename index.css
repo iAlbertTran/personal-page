@@ -1,105 +1,61 @@
-html{
-    background-color: #efefef;
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
 }
 
-body{
-    background-color: #efefef;
+#navBarContainer{
+    background-color: #282828;
+    width: 100%;
+    height: 10%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+#aplusplus{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 15%;
 }
 
-header nav{
+#navBar{
     display: flex;
     justify-content: flex-end;
-    background-color: #0B3C5D;
-    border-bottom: solid;
-    border-color: #F9CF00;
-    box-shadow: 0 4px 4px rgba(0,0,0,.4);
-    padding-top: 1%;
-    padding-bottom: 1%;
-    line-height: 1;
-    position: fixed;
-    width: 100%;
-    z-index: 150;
+    align-self: center;
+    margin-right: 10%;
+    flex-grow: 1;
+    height: 100%;
 }
 
-header nav a{
-    margin-right: 1%;
-    margin-left: 1%;
-    text-decoration: none;
-    font-family: "Baloo Chettan", sans-serif;
-    font-size: 150%;
-    color: #D9B310;
-}
-
-header nav a:hover{
-    border-top: solid;
-    text-decoration: none;
-    color: #F9CF00;
-}
-
-header nav a:visited{
-    text-decoration: none;
-    color: #F9CF00;
-}
-
-main{
-    background: url("img/scenery.jpg") no-repeat fixed center center;
-}
-#frontCover{
-    background: rgba(11,60,93, 0.6);
+#navBar a{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    height: 100vh;
-    overflow: hidden;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 775px;
-}
-
-#frontCover .coverText{
-    margin-top: 15%;
-    font-family: "Palanquin Dark", sans-serif;
-    font-size: 600%;
+    justify-content: center;
     text-align: center;
-    color: #F9CF00;
+    flex-grow: 1;
 }
 
-#frontCover #coverCaption{
-    font-size: 250%;
-}
-
-main footer{
-    font-size: 800%;
-}
-#coverArrow .arrowIMG{
-    animation-duration: 2.5s;
-    color: #F9CF00;
+#navBar a:hover{
+    background-color: white;
+    color: #282828;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
 }
 
 
-.section{
-    width: 100%;
-    height: 100vh;
+#aboutMe, #contactMe{
+    height: 100%;
+    margin: 0 10% 0 10%;
+    background-color: #FF3b3F;
 }
 
-.bar{
-    background-color: #0B3C5D;
-    text-align: center;
-    font-size: 150%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-bottom: solid;
-    border-color: #F9CF00;
-    box-shadow: 0 4px 4px rgba(0,0,0,.4);
-}
-#AboutMe{
-    background-color: #efefef;
-    font-family: "Baloo Chettan", sans-serif;
-}
-
-#AboutMe a{
-    color: #F9CF00;
-    text-decoration: none;
+#myPortfolio{
+    height: 100%;
+    margin: 0 10% 0 10%;
+    background-color: #282828;
 }
