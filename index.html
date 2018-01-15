@@ -13,15 +13,29 @@
 
     <div id="navBar">
 
-    	<a id="top" class="anchor">Top</a>
-        <a id="about" class="anchor">About</a>
-        <a id="portfolio" class="anchor">Portfolio</a>
-        <a id="contact" class="anchor" onclick="testFunction()">Contact</a>
+    	<a id="top" class="anchor" href="#frontCover">TOP</a>
+        <a id="about" class="anchor" href="#aboutMe">ABOUT</a>
+        <a id="portfolio" class="anchor" href="#myPortfolio">PORTFOLIO</a>
+        <a id="contact" class="anchor" href="#contactMe">CONTACT</a>
 
     </div>
 </div>
+
 <div id="frontCover">
-	<div id="frontCoverOverlay"></div>
+
+	<div id="frontCoverOverlay">
+		<div id="textContainer">
+		    <p id="line1">Albert T. Tran</p>
+		    <p id="line2">Web Developer</p>
+		    <p id="line3">Bay Area, California</p>
+		</div>
+		<a href="#aboutMe" id="arrowContainer">
+
+			<i id="arrow" class="fa fa-angle-double-down animated infinite bounce"></i>
+
+		</a>
+
+	</div>
 </div>
 <div id="aboutMe"></div>
 <div id=myPortfolio></div>
@@ -29,8 +43,12 @@
 
 
 <link rel="stylesheet" type="text/css" href="personalPage.css"/>
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Baloo+Chettan">
 <script src="personalPage.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
