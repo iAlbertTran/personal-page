@@ -95,7 +95,10 @@ function navBarColors(topOfPage){
 
 
 //highlights the button in the navbar that corresponds to the current section being viewed
+//subtracts by sectionMidPoint so transition of highlights begin when atleast half of the next section is visible.
 function highlightButton(){
+	//gets the height of a section / 2, all sections are equal height
+	var sectionMidPoint = document.getElementById("frontCover").getBoundingClientRect().height / 2;
 	switch(true){
 		case(windowPosition === 0):
 			var top = document.getElementById("top");
@@ -103,25 +106,25 @@ function highlightButton(){
 			top.style.color = "#F8F8F8";
 			return("#top");
 
-		case (windowPosition > 0 && windowPosition < aboutStartPos):
+		case (windowPosition > 0 && windowPosition < aboutStartPos - sectionMidPoint):
 			var top = document.getElementById("top");
 			top.style.backgroundColor = "#FF3b3F";
 			top.style.color = "#282828";
 			return("#top");
 
-		case (windowPosition >= aboutStartPos && windowPosition < portfolioStartPos):
+		case (windowPosition >= aboutStartPos - sectionMidPoint && windowPosition < portfolioStartPos - sectionMidPoint):
 			var about = document.getElementById("about");
 			about.style.backgroundColor = "#FF3b3F";
 			about.style.color = "#282828";
 			return("#about");
 
-		case (windowPosition >= portfolioStartPos && windowPosition < contactStartPos):
+		case (windowPosition >= portfolioStartPos - sectionMidPoint && windowPosition < contactStartPos - sectionMidPoint):
 			var portfolio = document.getElementById("portfolio");
 			portfolio.style.backgroundColor = "#FF3b3F";
 			portfolio.style.color = "#282828";
 			return("#portfolio");
 
-		case (windowPosition >= contactStartPos):
+		case (windowPosition >= contactStartPos - sectionMidPoint):
 			var contact = document.getElementById("contact");
 			contact.style.backgroundColor = "#FF3b3F";
 			contact.style.color = "#282828";
