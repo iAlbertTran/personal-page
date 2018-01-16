@@ -1,12 +1,29 @@
+var frontCoverStartPos;
+var aboutStartPos;
+var portfolioStartPos;
+var contactStartPos;
+var windowPosition;
+var currentSection;
+
 window.onload = function(){
 	navBarHover(true);
+	navBarColors(true);
+	windowPosition = $(window).scrollTop();
 
+	frontCoverStartPos = $('#frontCover').offset().top;
+	aboutStartPos = $('#aboutMe').offset().top;
+	portfolioStartPos = $('#myPortfolio').offset().top;
+	contactStartPos = $('#contactMe').offset().top;
+
+	currentSection = highlightButton();
 }
 
 window.onscroll = function() {
+	windowPosition = $(window).scrollTop();
 
 	navBarColors(false);
 	navBarHover(false);
+	currentSection = highlightButton();
 
 	if($(window).scrollTop() === 0){
 		navBarColors(true);
@@ -26,25 +43,32 @@ function navBarHover(topOfPage){
 	//when scrolled all the way to the top page
 	if(topOfPage){
 		//mouseenter for hovering
-		var hoverAnimation = $("#navBar > a, #aplusplus").mouseenter(function(){
+		$("#navBar > a, #aplusplus").mouseenter(function(){
 			$(this).css("background", "#FF3b3F").css("color", "#F8F8F8");
 		});
 
 		//mouseleave for when no longer hovering
-		hoverAnimation.mouseleave(function(){
+		$("#about, #portfolio, #contact, #aplusplus").mouseleave(function(){
 			$(this).css("background", "#F8F8F8").css("color", "#282828");
+		});
+		$("#top").mouseleave(function(){
+			$(this).css("background", "#FF3b3F").css("color", "#F8F8F8");
 		});
 	}
 	else{
-
 		var hoverAnimation = $("#navBar > a, #aplusplus").mouseenter(function(){
 			$(this).css("background", "#FF3b3F").css("color", "#282828");
 		});
 
-
 		hoverAnimation.mouseleave(function(){
 			$(this).css("background", "#282828").css("color", "#F8F8F8");
 		});
+
+		$(currentSection).mouseleave(function(){
+			$(this).css("background", "#FF3b3F").css("color", "#282828");
+		});
+
+
 	}
 }
 
@@ -54,7 +78,7 @@ function navBarColors(topOfPage){
 	//when scrolled all the way to the top page
 	if(topOfPage){
 
-		$("#navBar > a, #navBarContainer, #aplusplus").css("backgroundColor", "#F8F8F8").css("color", "#282828");
+		$("#about, #portfolio, #contact, #navBarContainer, #aplusplus").css("backgroundColor", "#F8F8F8").css("color", "#282828");
 		$("#aplusplus").css("borderColor", "#FF3b3F");
 
 	}
@@ -63,6 +87,45 @@ function navBarColors(topOfPage){
 
 		$("#navBar > a, #navBarContainer, #aplusplus").css("backgroundColor", "#282828").css("color", "#F8F8F8");
 		$("#aplusplus").css("borderColor", "#FF3b3F");
+
+
+	}
+
+}
+
+
+//highlights the button in the navbar that corresponds to the current section being viewed
+function highlightButton(){
+	switch(true){
+		case(windowPosition === 0):
+			var top = document.getElementById("top");
+			top.style.backgroundColor = "#FF3b3F";
+			top.style.color = "#F8F8F8";
+			return("#top");
+
+		case (windowPosition > 0 && windowPosition < aboutStartPos):
+			var top = document.getElementById("top");
+			top.style.backgroundColor = "#FF3b3F";
+			top.style.color = "#282828";
+			return("#top");
+
+		case (windowPosition >= aboutStartPos && windowPosition < portfolioStartPos):
+			var about = document.getElementById("about");
+			about.style.backgroundColor = "#FF3b3F";
+			about.style.color = "#282828";
+			return("#about");
+
+		case (windowPosition >= portfolioStartPos && windowPosition < contactStartPos):
+			var portfolio = document.getElementById("portfolio");
+			portfolio.style.backgroundColor = "#FF3b3F";
+			portfolio.style.color = "#282828";
+			return("#portfolio");
+
+		case (windowPosition >= contactStartPos):
+			var contact = document.getElementById("contact");
+			contact.style.backgroundColor = "#FF3b3F";
+			contact.style.color = "#282828";
+			return("#contact");
 
 	}
 
@@ -90,5 +153,4 @@ function scrollAnimation(clickedLink){
 
 	//animates the scrolling function by making the scrollTop of the body change over 1000ms
 	$("html, body").animate({scrollTop: pageSectionPosition}, 1000);
-	//console.log(($(targetDiv).offset().top));
 }
