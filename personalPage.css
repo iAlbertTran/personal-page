@@ -165,6 +165,9 @@ body{
 
     background: rgba(229, 229, 229, 1);
 
+    transition-property: background;
+    transition-duration: 0.5s;
+
 }
 
 #aboutTxtContainer, #photoContainer{

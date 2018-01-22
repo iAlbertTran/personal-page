@@ -7,7 +7,9 @@ var currentSection;
 
 window.onload = function(){
 	var atTop = false;
-	if($(window).scrollTop() == 0)
+	windowPosition = $(window).scrollTop();
+
+	if(windowPosition == 0)
 		atTop = true;
 	navBarHover(atTop);
 	navBarColors(atTop);
@@ -26,6 +28,7 @@ window.onscroll = function() {
 	navBarColors(false);
 	navBarHover(false);
 	currentSection = highlightButton();
+	transparentBG();
 
 	if($(window).scrollTop() === 0){
 		navBarColors(true);
@@ -104,25 +107,25 @@ function highlightButton(){
 	switch(true){
 		case(windowPosition === 0):
 			var top = document.getElementById("top");
-			top.style.backgroundColor = "#FF3b3F";
+			top.style.backgroundColor = "#FF3B3F";
 			top.style.color = "#F8F8F8";
 			return("#top");
 
 		case (windowPosition > 0 && windowPosition < aboutStartPos - sectionMidPoint):
 			var top = document.getElementById("top");
-			top.style.backgroundColor = "#FF3b3F";
+			top.style.backgroundColor = "#FF3B3F";
 			top.style.color = "#282828";
 			return("#top");
 
 		case (windowPosition >= aboutStartPos - sectionMidPoint && windowPosition < portfolioStartPos - sectionMidPoint):
 			var about = document.getElementById("about");
-			about.style.backgroundColor = "#FF3b3F";
+			about.style.backgroundColor = "#FF3B3F";
 			about.style.color = "#282828";
 			return("#about");
 
 		case (windowPosition >= portfolioStartPos - sectionMidPoint && windowPosition < contactStartPos - sectionMidPoint):
 			var portfolio = document.getElementById("portfolio");
-			portfolio.style.backgroundColor = "#FF3b3F";
+			portfolio.style.backgroundColor = "#FF3B3F";
 			portfolio.style.color = "#282828";
 			return("#portfolio");
 
@@ -134,6 +137,15 @@ function highlightButton(){
 
 	}
 
+}
+
+//makes the about section text box transparent when scrolling, then solid when not
+function transparentBG(){
+	var textBox = document.getElementById("aboutContentContainer");
+	textBox.style.background = "rgba(229, 229, 229, 0.5)";
+	setTimeout(function(){
+		textBox.style.background = "rgba(229, 229, 229, 1)"
+	}, 500);
 }
 
 
