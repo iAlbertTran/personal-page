@@ -6,9 +6,11 @@ var windowPosition;
 var currentSection;
 
 window.onload = function(){
-	navBarHover(true);
-	navBarColors(true);
-	windowPosition = $(window).scrollTop();
+	var atTop = false;
+	if($(window).scrollTop() == 0)
+		atTop = true;
+	navBarHover(atTop);
+	navBarColors(atTop);
 
 	frontCoverStartPos = $('#frontCover').offset().top;
 	aboutStartPos = $('#aboutMe').offset().top;
