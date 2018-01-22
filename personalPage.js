@@ -13,6 +13,8 @@ window.onload = function(){
 		atTop = true;
 	navBarHover(atTop);
 	navBarColors(atTop);
+	typingAnimation();
+	adjustSectionTitle();
 
 	frontCoverStartPos = $('#frontCover').offset().top;
 	aboutStartPos = $('#aboutMe').offset().top;
@@ -28,7 +30,8 @@ window.onscroll = function() {
 	navBarColors(false);
 	navBarHover(false);
 	currentSection = highlightButton();
-	transparentBG();
+	transparentBG(document.getElementById("aboutContentContainer"));
+	transparentBG(document.getElementById("aboutTitleContainer"));
 
 	if($(window).scrollTop() === 0){
 		navBarColors(true);
@@ -36,13 +39,19 @@ window.onscroll = function() {
 	}
 }
 
-/*window.onresize = function(){
-    var textContainer = document.getElementById("textContainer");
-    var textContainerWidth = textContainer.getBoundingClientRect().width;
-    textContainer.style.fontSize = textContainerWidth / 11 + "px";
-    //textContainer.style.fontSize = textContainer.style
-}*/
+window.onresize = function(){
+	adjustSectionTitle();
+}
 
+//adjusts the size of the text to fit the title container, as well as the position
+function adjustSectionTitle(){
+	var aboutTitleContainer = document.getElementById("aboutTitleContainer");
+	var aboutTitle = document.getElementById("aboutTitle");
+	aboutTitle.style.fontSize = aboutTitleContainer.clientWidth / 15 + "px";
+
+	var aboutMe = document.getElementById("aboutContentContainer");
+	aboutTitleContainer.style.top = aboutMe.clientHeight/20 + "px";
+}
 //jquery code used to set the animations when hovering over anchors and logo in the navbar
 function navBarHover(topOfPage){
 	//when scrolled all the way to the top page
@@ -139,12 +148,11 @@ function highlightButton(){
 
 }
 
-//makes the about section text box transparent when scrolling, then solid when not
-function transparentBG(){
-	var textBox = document.getElementById("aboutContentContainer");
-	textBox.style.background = "rgba(229, 229, 229, 0.5)";
+//makes the about section text box transparent when scrolling, then solid when not, fun little style change
+function transparentBG(element){
+	element.style.background = "rgba(229, 229, 229, 0.25)";
 	setTimeout(function(){
-		textBox.style.background = "rgba(229, 229, 229, 1)"
+		element.style.background = "rgba(229, 229, 229, 1)"
 	}, 500);
 }
 
@@ -170,4 +178,30 @@ function scrollAnimation(clickedLink){
 
 	//animates the scrolling function by making the scrollTop of the body change over 1000ms
 	$("html, body").animate({scrollTop: pageSectionPosition}, 1000);
+}
+
+
+//a animation for section titles to give the look of typing
+function typingAnimation(){
+	var aboutTitle = document.getElementById("aboutTitle");
+	aboutTitle.style.width = "100%";
+	setInterval(function(){
+		if(aboutTitle.style.width == "0px"){
+			aboutTitle.style.width = "100%";
+			aboutTitle.style.transitionDuration = "2.5s";
+		}
+		else{
+			aboutTitle.style.width = "0px";
+			aboutTitle.style.transitionDuration = "1s";
+		}
+
+	}, 3500);
+
+	aboutTitle.style.borderRight = "solid rgba(255, 59, 63)";
+	setInterval(function(){
+		if(aboutTitle.style.borderRight === "solid rgb(255, 59, 63)")
+			aboutTitle.style.borderRight = "solid transparent";
+		else
+			aboutTitle.style.borderRight = "solid rgb(255, 59, 63)";
+	}, 500);
 }
