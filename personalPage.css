@@ -6,12 +6,15 @@ body{
     background-color: #F8F8F8;
 }
 
-
+/********************************************************************************************/
+/* navbar css */
+/********************************************************************************************/
 #navBarContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+
     top: 0;
 
     width: 100%;
@@ -77,10 +80,9 @@ body{
     color: #282828;
 }
 
-
-
-
-
+/********************************************************************************************/
+/* frontcover css */
+/********************************************************************************************/
 #frontCover{
     background: url("img/scenery.jpg") no-repeat fixed center center;
     background-size: cover;
@@ -97,24 +99,26 @@ body{
     background-color: rgba(40,40,40,0.7);
 }
 
-
-
 #textContainer{
     margin: auto;
+
     font-size: 75px;
+
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+
     color: #F8F8F8;
 }
 
 #textContainer p{
+
     border-left: 5px solid rgba(255,59,63, 1);
     border-bottom: 5px solid rgba(255,59,63, 1);
 
-    margin: 2% 0 2% 0;
-    padding: 1% 2% 1% 2%;
+    margin: 2% 0;
+    padding: 1% 2%;
 
     letter-spacing: 5px;
     white-space: nowrap;
@@ -122,27 +126,19 @@ body{
     font-family: "Viga", sans-serif;
 }
 
-
-
-#arrowContainer{
-    margin-bottom: 3%;
-}
+#arrowContainer{ margin-bottom: 3%; }
 
 #arrow{
+
     font-size: 100px;
     color: rgba(255,59,63,1);
     animation-duration: 3s;
 
 }
 
-
-
-
-
-
-
-
-
+/********************************************************************************************/
+/* About section css */
+/********************************************************************************************/
 #aboutMe, #contactMe{
     height: 100%;
     background-color: #F8F8F8;
@@ -189,11 +185,14 @@ body{
     overflow:hidden;
     white-space: nowrap;
     letter-spacing: 5px;
+
     margin: 0 auto;
+
     width: 0px;
 
     font-size: 100px;
     font-family: "Permanent Marker", sans-serif;
+
     color: #282828;
 
     transition-property: width;
@@ -209,7 +208,7 @@ body{
 
     box-shadow: -4px 4px 4px rgba(0,0,0,.4), 0 0 4px rgba(0,0,0,.4);
     
-    margin: 0 5% 0 5%;
+    margin: 0 5%;
 
     background: rgba(229, 229, 229, 1);
 
@@ -231,7 +230,7 @@ body{
 }
 
 #photoContainer{
-    margin: 2.5% 2.5% 2.5% 2.5%;
+    margin: 2.5%;
     flex-grow: 1;
 }
 #aboutMeTxt{
@@ -251,30 +250,32 @@ body{
 
 #aboutMeTxt #quote, #aboutMeTxt #author{
     width: 100%;
+
     font-weight: bold;
     text-align: center;
+
     padding: 1%;
+
     border-top: solid #FF3b3F;
 }
 
 #me{
     border-radius: 200px;
-
-
     height: 300px;
     width: 300px;
 }
 
-
-
-
-
+/********************************************************************************************/
+/* Portfolio Section CSS */
+/********************************************************************************************/
 #myPortfolio{
     height: 100%;
     background-color: #282828;
 }
 
-
+/********************************************************************************************/
+/* Media Queries */
+/********************************************************************************************/
 @media only screen and (max-width: 480px){
     #textContainer{ font-size: 25px; }
     #aboutMeTxt{ font-size: 7px; }
