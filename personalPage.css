@@ -167,7 +167,7 @@ body{
     display: flex;
     justify-content: center;
 
-    background: rgba(229, 229, 229, 1);
+    background: #282828 url("img/titleBG.png") no-repeat fixed center center;
 
     box-shadow: -4px 4px 4px rgba(0,0,0,.4), 4px -4px 4px rgba(0,0,0,.4);
 
@@ -182,12 +182,12 @@ body{
 
 }
 
-#aboutTitleBox{
+#aboutTitleBox, #portfolioTitleBox, #contactTitleBox{
     display: inline-block;
     padding: 1%;
-
 }
-#aboutTitle{
+
+#aboutTitle, #portfolioTitle, #contactTitle{
     overflow:hidden;
     white-space: nowrap;
     letter-spacing: 5px;
@@ -199,7 +199,7 @@ body{
     font-size: 100px;
     font-family: "Permanent Marker", sans-serif;
 
-    color: #282828;
+    color: #F8F8F8;
 
     transition-property: width;
     transition-timing-function: steps(25);
@@ -220,6 +220,8 @@ body{
 
     transition-property: background;
     transition-duration: 0.5s;
+
+    border-radius: 10px;
 
 }
 
@@ -243,7 +245,7 @@ body{
     font-family: "Kalam", sans-serif;
     font-size: 17px;
 
-    color: #282828;
+    color: #F8F8F8;
 
     margin: 0;
     text-align: justify;
@@ -277,6 +279,125 @@ body{
 #myPortfolio{
     height: 100%;
     background-color: #282828;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: url("img/portfolioBG.jpg") no-repeat fixed center center;
+    background-size: cover;
+}
+
+#portfolioTitleContainer{
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+
+    background: #282828 url("img/titleBG.png") no-repeat fixed center center;
+    
+    box-shadow: -4px 4px 4px rgba(0,0,0,.4), 4px -4px 4px rgba(0,0,0,.4);
+
+
+    transform: rotate(350deg);
+
+    position: relative;
+    align-self: flex-start;
+    left: 1%;
+}
+
+#portfolioContentContainer{
+    width: 80%;
+}
+
+#current, #inProgress, #next{ 
+
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 0px;
+    overflow: hidden
+}
+#portfolioContentContainer .colored{
+    font-size: 100px;
+    margin: 1%;
+
+    transition-property: font-size;
+    transition-duration: 0.25s;
+}
+
+#portfolioContentContainer .colored:hover{
+    font-size: 150px;
+}
+
+#currentContainer p, #inProgressContainer p, #nextContainer p{
+    font-size: 75px;
+    text-align: center;
+    margin: 0;
+    width: ;
+
+    box-shadow: -4px 4px 4px rgba(0,0,0,.4), 0 0 4px rgba(0,0,0,.4);
+
+    border-radius: 10px;
+    
+    margin: 0 5%;
+
+    background: rgba(40,40,40,0.9);
+    width: 80%;
+}
+
+
+/********************************************************************************************/
+/* Contact Section CSS */
+/********************************************************************************************/
+#contactMe{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: url("img/contactBG.jpg") no-repeat fixed center center;
+    background-size: cover;
+}
+
+#contactTitleContainer{
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+
+    background: #282828 url("img/titleBG.png") no-repeat fixed center center;
+
+    box-shadow: -4px 4px 4px rgba(0,0,0,.4), 4px -4px 4px rgba(0,0,0,.4);
+
+
+    transform: rotate(350deg);
+
+    position: relative;
+    align-self: flex-start;
+    left: 1%;
+}
+
+#contactContentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: -4px 4px 4px rgba(0,0,0,.4), 0 0 4px rgba(0,0,0,.4);
+    
+    margin: 0 5%;
+
+    background: rgba(40,40,40,0);
+    width: 80%;
+    height: 75%;
+
+    border-radius: 10px;
 }
 
 /********************************************************************************************/
@@ -290,6 +411,8 @@ body{
         height: 125px;
         width: 125px;
     }
+    #aboutTitle, #portfolioTitle, #contactTitle{ letter-spacing: 1px; }
+    #portfolioContentContainer .colored{ font-size: 30px; }
 }
 
 @media screen and (min-width: 481px) and (max-width: 600px){
@@ -300,6 +423,8 @@ body{
         height: 135px;
         width: 135px;
     }
+    #aboutTitle, #portfolioTitle, #contactTitle{ letter-spacing: 2px; }
+    #portfolioContentContainer .colored{ font-size: 35px; }
 }
 
 @media screen and (min-width: 601px) and (max-width: 767px){
@@ -310,16 +435,22 @@ body{
         height: 200px;
         width: 200px;
     }
+    #aboutTitle, #portfolioTitle, #contactTitle{ letter-spacing: 3px; }
+    #portfolioContentContainer .colored{ font-size: 40px; }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
     #textContainer{ font-size: 60px; }
     #aboutMeTxt{ font-size: 15px; }
+
     #me{
         border-radius: 290px;
         height: 200px;
         width: 200px;
     }
+
+    #aboutTitle, #portfolioTitle, #contactTitle{ letter-spacing: 4px; }
+    #portfolioContentContainer .colored{ font-size: 45px; }
 }
 
 @media screen and (max-width: 767px){
