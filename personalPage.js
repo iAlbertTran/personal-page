@@ -225,13 +225,19 @@ function expand(target) {
     //gets what was clicked minus "Container" to expand the content;
     var clickedBox = target.split("C")[0];
     var content = document.getElementById(clickedBox);
+
+    //switch case for window size (mobile or desktop). 
+    //If desktop, containers are to the right of anchors
+    //if mobile, containers are below anchors
     switch (true) {
+
         case (window.innerWidth > 767):
             if (content.style.width == "100%")
                 content.style.width = "0px";
             else
                 content.style.width = "100%";
             break;
+
         case (window.innerWidth <= 767):
             if (content.style.height == "100%")
                 content.style.height = "0px";
