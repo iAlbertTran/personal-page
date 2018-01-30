@@ -480,7 +480,6 @@ body{
 
 #contactContentContainer{
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
@@ -494,6 +493,115 @@ body{
 
     border-radius: 10px;
 }
+
+#contactContentContainer form, #contactContentContainer #connectionsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 40%;
+    height: 80%;
+
+    font-family: "Comfortaa", sans-serif;
+}
+
+#contactContentContainer form p{
+   height: 15%;
+   margin: 0;
+
+   background: #282828;
+   color: #f8f8f8;
+
+   border-top: #FF3b3F solid;
+   border-bottom: none;
+   border-left: none;
+   border-right: none;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   font-size: 50px;
+}
+
+#contactContentContainer form input{
+   height: 10%;
+   font-size: 50px;
+
+   background: #282828;
+   color: #f8f8f8;
+
+   padding: 1%;
+
+   border-top: #FF3b3F solid;
+   border-bottom: none;
+   border-left: none;
+   border-right: none;
+
+}
+
+#contactContentContainer form textarea {
+   height: 40%;
+   font-size: 50px;
+   resize: none;
+
+   background: #282828;
+   color: #f8f8f8;
+
+   padding: 1%;
+
+   border-top: #FF3b3F solid;
+   border-bottom: none;
+   border-left: none;
+   border-right: none;
+}
+
+#contactContentContainer form button{
+   height: 10%;
+
+   background: #282828;
+   color: #f8f8f8;
+   border-top: #FF3b3F solid;
+   border-bottom: none;
+   border-left: none;
+   border-right: none;
+}
+
+
+#contactContentContainer #connectionsContainer div{
+    padding: 2.5% 5%;
+    font-size: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    flex-grow: 1;
+
+    border-bottom: #FF3b3F solid;
+
+    background-color: #282828;
+    color: #f8f8f8;
+
+    transition-property: color, background-color;
+    transition-duration: 0.5s;
+}
+
+#contactContentContainer #connectionsContainer div:hover{
+    background-color: #f8f8f8;
+    color: #282828;
+}
+
+#contactContentContainer #connectionsContainer a{
+    text-decoration: none;
+}
+
+
+#contactContentContainer #connectionsContainer a:visited{
+    color: inherit;
+}
+
 
 /********************************************************************************************/
 /* Media Queries */
@@ -514,6 +622,12 @@ body{
         height: 100px;
     }
     .colorBox p{ font-size: 35px; }
+
+    #contactContentContainer form p { font-size: 30px; }
+
+    #contactContentContainer form input { font-size: 30px; }
+
+    #contactContentContainer form textarea { font-size: 30px; }
 }
 
 @media screen and (min-width: 481px) and (max-width: 600px){
@@ -531,6 +645,12 @@ body{
         height: 175px;
     }
     .colorBox p{ font-size: 45px; }
+
+    #contactContentContainer form p { font-size: 35px; }
+
+    #contactContentContainer form input { font-size: 35px; }
+
+    #contactContentContainer form textarea { font-size: 35px; }
 }
 
 @media screen and (min-width: 601px) and (max-width: 767px){
@@ -548,6 +668,12 @@ body{
         height: 150px;
     }
     .colorBox p{ font-size: 55px; }
+
+    #contactContentContainer form p { font-size: 40px; }
+
+    #contactContentContainer form input { font-size: 40px; }
+
+    #contactContentContainer form textarea { font-size: 40px; }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -569,7 +695,17 @@ body{
     }
 
     .colorBox p{ font-size: 65px; }
+
+
+    #contactContentContainer form p { font-size: 45px; }
+
+    #contactContentContainer form input { font-size: 45px; }
+
+    #contactContentContainer form textarea { font-size: 45px; }
 }
+
+
+
 
 @media screen and (max-width: 767px){
 
