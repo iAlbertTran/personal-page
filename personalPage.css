@@ -487,11 +487,12 @@ body{
     
     margin: 0 5%;
 
-    background: rgba(40,40,40,0);
+    background: rgba(40,40,40,.9);
     width: 80%;
     height: 75%;
 
     border-radius: 10px;
+
 }
 
 #contactContentContainer form, #contactContentContainer #connectionsContainer{
@@ -509,11 +510,11 @@ body{
    height: 15%;
    margin: 0;
 
-   background: #282828;
+   background: transparent;
    color: #f8f8f8;
 
-   border-top: #FF3b3F solid;
-   border-bottom: none;
+   border-top: none;
+   border-bottom: #FF3b3F solid;
    border-left: none;
    border-right: none;
 
@@ -529,15 +530,12 @@ body{
    height: 10%;
    font-size: 50px;
 
-   background: #282828;
+   background: transparent;
    color: #f8f8f8;
 
    padding: 1%;
 
-   border-top: #FF3b3F solid;
-   border-bottom: none;
-   border-left: none;
-   border-right: none;
+   border: #282828 solid;
 
 }
 
@@ -546,24 +544,21 @@ body{
    font-size: 50px;
    resize: none;
 
-   background: #282828;
+   background: transparent;
    color: #f8f8f8;
 
    padding: 1%;
 
-   border-top: #FF3b3F solid;
-   border-bottom: none;
-   border-left: none;
-   border-right: none;
+   border: #282828 solid;
 }
 
 #contactContentContainer form button{
    height: 10%;
 
-   background: #282828;
+   background: transparent;
    color: #f8f8f8;
    border-top: #FF3b3F solid;
-   border-bottom: none;
+   border-bottom: #FF3b3F solid;
    border-left: none;
    border-right: none;
 }
@@ -571,7 +566,7 @@ body{
 
 #contactContentContainer #connectionsContainer div{
     padding: 2.5% 5%;
-    font-size: 35px;
+    font-size: 30px;
 
     display: flex;
     justify-content: space-between;
@@ -581,7 +576,7 @@ body{
 
     border-bottom: #FF3b3F solid;
 
-    background-color: #282828;
+    background: transparent;
     color: #f8f8f8;
 
     transition-property: color, background-color;
@@ -589,7 +584,7 @@ body{
 }
 
 #contactContentContainer #connectionsContainer div:hover{
-    background-color: #f8f8f8;
+    background-color: rgba(248, 248, 248, .9);
     color: #282828;
 }
 
@@ -628,6 +623,8 @@ body{
     #contactContentContainer form input { font-size: 30px; }
 
     #contactContentContainer form textarea { font-size: 30px; }
+
+    #contactContentContainer #connectionsContainer div{ font-size: 5px;}
 }
 
 @media screen and (min-width: 481px) and (max-width: 600px){
@@ -651,6 +648,8 @@ body{
     #contactContentContainer form input { font-size: 35px; }
 
     #contactContentContainer form textarea { font-size: 35px; }
+
+    #contactContentContainer #connectionsContainer div{ font-size: 10px;}
 }
 
 @media screen and (min-width: 601px) and (max-width: 767px){
@@ -674,6 +673,8 @@ body{
     #contactContentContainer form input { font-size: 40px; }
 
     #contactContentContainer form textarea { font-size: 40px; }
+
+    #contactContentContainer #connectionsContainer div{ font-size: 15px;}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -702,9 +703,15 @@ body{
     #contactContentContainer form input { font-size: 45px; }
 
     #contactContentContainer form textarea { font-size: 45px; }
+
+    #contactContentContainer #connectionsContainer div{ font-size: 20px;}
+
 }
 
 
+@media screen and (min-width: 1025px) and (max-width: 1350px) {
+    #contactContentContainer #connectionsContainer div{ font-size: 25px;}
+}
 
 
 @media screen and (max-width: 767px){
