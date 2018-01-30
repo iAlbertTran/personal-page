@@ -225,11 +225,19 @@ function expand(target) {
     //gets what was clicked minus "Container" to expand the content;
     var clickedBox = target.split("C")[0];
     var content = document.getElementById(clickedBox);
-
-    if (content.style.width == "100%") {
-        content.style.width = "0px";
+    switch (true) {
+        case (window.innerWidth > 767):
+            if (content.style.width == "100%")
+                content.style.width = "0px";
+            else
+                content.style.width = "100%";
+            break;
+        case (window.innerWidth <= 767):
+            if (content.style.height == "100%")
+                content.style.height = "0px";
+            else
+                content.style.height = "100%";
+            break;
     }
-    else
-        content.style.width = "100%";
 
 }
