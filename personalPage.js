@@ -25,7 +25,9 @@ window.onload = function(){
 	portfolioStartPos = $('#myPortfolio').offset().top;
 	contactStartPos = $('#contactMe').offset().top;
 
-	currentSection = highlightButton();
+    currentSection = highlightButton();
+
+
 }
 
 window.onscroll = function() {
@@ -57,7 +59,7 @@ function adjustSectionTitle(section, letters){
 	sectionTitle.style.fontSize = sectionTitleContainer.clientWidth / letters + "px";
 
 	var sectionContentContainer = document.getElementById(section + "ContentContainer");
-	sectionTitleContainer.style.top = sectionContentContainer.clientHeight/20 + "px";
+    sectionTitleContainer.style.top = sectionContentContainer.clientHeight / 20 + "px";
 }
 
 //jquery code used to set the animations when hovering over anchors and logo in the navbar
@@ -216,4 +218,18 @@ function typingAnimation(section){
 		else
 			sectionTitle.style.borderRight = "solid rgb(255, 59, 63)";
 	}, 500);
+}
+
+//expands the list of skills on the portoflio section
+function expand(target) {
+    //gets what was clicked minus "Container" to expand the content;
+    var clickedBox = target.split("C")[0];
+    var content = document.getElementById(clickedBox);
+
+    if (content.style.width == "100%") {
+        content.style.width = "0px";
+    }
+    else
+        content.style.width = "100%";
+
 }
