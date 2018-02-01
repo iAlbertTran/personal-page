@@ -16,9 +16,9 @@ window.onload = function(){
 	typingAnimation("portfolio");
 	typingAnimation("about");
 	typingAnimation("contact");
-	adjustSectionTitle("about", 12);
-	adjustSectionTitle("portfolio", 12);
-	adjustSectionTitle("contact", 12);
+	adjustSectionTitle("about", 10);
+	adjustSectionTitle("portfolio", 10);
+	adjustSectionTitle("contact", 10);
 
 	frontCoverStartPos = $('#frontCover').offset().top;
 	aboutStartPos = $('#aboutMe').offset().top;
@@ -45,7 +45,7 @@ window.onscroll = function() {
 	}
 }
 
-window.onresize = function(){
+window.onresize = function () {
 	adjustSectionTitle("about", 12);
 	adjustSectionTitle("portfolio", 12);
 	adjustSectionTitle("contact", 12);
@@ -53,10 +53,15 @@ window.onresize = function(){
 
 //adjusts the size of the text to fit the title container, as well as the position
 //takes in the section title and number of letters in the titlev to properly format it
-function adjustSectionTitle(section, letters){
+function adjustSectionTitle(section, letters) {
+    
 	var sectionTitleContainer = document.getElementById(section + "TitleContainer");
 	var sectionTitle = document.getElementById(section + "Title");
 	sectionTitle.style.fontSize = sectionTitleContainer.clientWidth / letters + "px";
+
+    //if mobile view, stops it from repositioning the container
+    if (window.innerWidth <= 767)
+        return;
 
 	var sectionContentContainer = document.getElementById(section + "ContentContainer");
     sectionTitleContainer.style.top = sectionContentContainer.clientHeight / 20 + "px";
@@ -239,10 +244,14 @@ function expand(target) {
             break;
 
         case (window.innerWidth <= 767):
-            if (content.style.height == "100%")
+            if (content.style.height == "100%") {
                 content.style.height = "0px";
-            else
+                content.style.display = "none";
+            }
+            else {
                 content.style.height = "100%";
+                content.style.display = "flex";
+            }
             break;
     }
 
