@@ -1,1 +1,0 @@
-My GitHub Pages, a portfolio page created for freeCodeCamp's challenge.
