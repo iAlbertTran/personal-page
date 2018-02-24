@@ -1,0 +1,155 @@
+html{
+     background-color: #efefef;
+ }
+
+body{
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+::selection{
+    position: relative;
+    background-color: #CAEBF2;
+}
+
+
+
+
+
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #0B3C5D;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    position: fixed;
+    width: 100%;
+    min-width: 550px;
+    border-bottom: solid;
+    color: #F9CF00;
+    box-shadow: 0 4px 4px rgba(0,0,0,.4);
+    z-index: 160;
+}
+
+nav a{
+    color: #D9B310;
+    font-size: 175%;
+    justify-content: flex-end;
+    margin-right: 1%;
+    text-decoration: none;
+    font-family: "Baloo Chettan";
+}
+
+nav a:visited, nav #top, nav a:hover, .section a:hover{
+    color: #F9CF00;
+    text-decoration: none;
+}
+
+nav a:hover{
+    border-top: solid;
+}
+
+
+
+
+
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #D9D9D9;
+    text-align: center;
+}
+
+
+
+
+
+
+#frontCover{
+    background: url("img/scenery.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin-top: 4%;
+}
+
+#frontCover p{
+    margin-top: 4.25%;
+    color: #F9CF00;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.textBox{
+    position: absolute;
+    left: 3vw;
+    top: 10vh;
+}
+#4 #arrow .arrowIMG{
+    font-size: 80px;
+    color: #F9CF00;
+    animation-duration: 2.5s;
+
+}
+
+.coverText{
+    box-shadow: 0 4px 4px -4px rgba(0,0,0, 0.5);
+    font-family: "Palanquin Dark";
+    font-size: 5vw;
+}
+
+#coverCaption{
+    font-size: 1.5vw;
+    border-style: none;
+}
+
+#coverHead{
+    width: 100vw;
+    height: 80vh;
+    background: rgba(11,60,93, 0.6);
+    min-width: 550px;
+}
+
+#frontCover footer{
+    text-align: center;
+    background: rgba(11,60,93, 0.6);
+    height: 10vh;
+}
+
+
+
+
+
+.bar{
+    color: #F9CF00;
+    font-size: 175%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+    border-bottom: solid;
+    font-family: "Baloo Chettan";
+    box-shadow: 0 4px 4px rgba(0,0,0,.4);
+    background-color: #0B3C5D;
+}
+
+.bar a{
+    color: #F9CF00;
+}
+
+.stick {
+    position:fixed;
+    top:0px;
+    z-index:999;
+}
